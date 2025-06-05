@@ -39,7 +39,9 @@ document.addEventListener("DOMContentLoaded", () => {
           });
         } else {
           const li = document.createElement('li');
-          li.innerHTML = '<em>No participants yet</em>';
+          const em = document.createElement('em');
+          em.textContent = 'No participants yet';
+          li.appendChild(em);
           participantsList.appendChild(li);
         }
         const participantsTitle = document.createElement('h5');
